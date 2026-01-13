@@ -1,0 +1,91 @@
+
+
+body{
+    background-color: rgb(1,46,46);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+   
+    font-family: 'sens-serif';
+
+}
+.calandar{
+    width: 400px;
+    padding: 32px;
+    background:rgba(255,255,255,0.1);
+    border-radius: 25px;
+    height: 400px;
+backdrop-filter: blur(15px);
+border: 1px solid rgba(255,255,255,0.5);
+box-shadow:  0 20px 50px -15px rgba(255,255,255,0.5);
+margin-top: 60px;
+}
+.header{
+display:flex;
+justify-content: space-between;  
+align-items: center;  
+margin-bottom: 25px;
+color: white;
+
+}
+.nav-buttons span{
+    background-color: rgb(255,255,255,0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-left: 8px;
+    cursor:pointer ;
+    font-size: 0.9rem;
+    transition:0.4s;    
+}
+.nev-buttons span :hover{
+    background:rgba(255,255,255,0.25);
+
+}
+.calandar-grid{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap:30px;
+}
+.day{
+    color: rgb(255,255,255,0.8);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 10px;
+
+
+}
+.date{
+    aspect-ratio:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.9);
+    font-weight: 350;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 12px;
+    /* transition: all 03s cubic-bezier(0.075,); */
+}
+.date:not(.empty):hover{
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-2px);
+    color: white;
+}
+.active{
+    background-color: aliceblue;
+    color: black;
+    font-weight: 700;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    border-radius: 5px;
+    
+
+}
+.active:hover{
+    background-color:rgba(255,255,255,0.1);
+
+}
+.empty:hover{
+cursor: default;
+}
